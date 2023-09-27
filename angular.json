@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "boostrapAngular"
+    }
+  },
+  "defaultProject": "boostrapAngular",
+  "cli": {
+    "analytics": false
+  }
 }
