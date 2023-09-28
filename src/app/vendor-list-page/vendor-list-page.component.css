@@ -1,0 +1,38 @@
+.ba-increment {
+    font-size: 0.7rem;
+}
+
+.ba-search-group {
+    border: 1px solid #dddddd; 
+}
+
+.ba-search-group input {
+    border: none;
+    outline: 0px;
+    box-shadow: none;
+}
+
+.ba-vr {
+    color: #dddddd;
+    width: 1px;
+    opacity: 1;
+}
+
+.ba-advance-search {
+    color: #474AFF;
+    font-weight: 400;
+}
+
+.ba-card-label {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ba-increment-container {
+    font-weight: 400;
+    line-height: 12px;
+    color: #057926;
+    background-color: #cef4d9;
+    border-radius: 15px;
+}

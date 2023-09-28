@@ -1,0 +1,79 @@
+<div class="bg-white">
+  <section>
+    <div class="container-fluid">
+      <h5 class="mb-2 fs-5">Overview</h5>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          *ngFor="let card of cards"
+          class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-2 mb-3 d-flex align-items-stretch"
+        >
+          <div class="d-flex flex-column shadow-sm p-3 rounded bg-white w-100">
+            <h4 class="mb-3 fs-4">{{ card?.count }}</h4>
+            <span class="mb-1 text-capitalize ba-card-label">
+              {{ card?.label }}
+            </span>
+            <h6 *ngIf="card?.label === 'new vendors'" class="m-0">
+              <span
+                class="ba-increment-container d-inline-flex p-1 align-items-center"
+              >
+                <i class="fa-solid fa-arrow-up"></i>&nbsp;
+                <span class="ba-increment">
+                  {{ card?.increment }}% (Last 30 days)
+                </span>
+              </span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-0 mb-3" />
+  </section>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <h4 class="text-capitalize mb-2 fs-5">list of vendors</h4>
+        </div>
+        <div
+          class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 d-flex flex-row flex-wrap justify-content-end gap-2 mb-2"
+        >
+          <div>
+            <label class="visually-hidden" for="autoSizingInputGroup">
+              search
+            </label>
+            <div
+              class="input-group rounded-2 ba-search-group overflow-hidden d-flex flex-row align-items-center"
+            >
+              <input
+                type="text"
+                class="form-control rounded-0"
+                id="autoSizingInputGroup"
+                placeholder="search"
+              />
+              <span class="p-2">
+                <i class="fa-solid fa-search"></i>
+              </span>
+              <div class="vr ba-vr"></div>
+              <button
+                type="button"
+                class="btn text-capitalize fs-6 ba-advance-search"
+              >
+                advance search
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i>
+            <span class="text-capitalize fs-6">&nbsp;add vendor</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br /><br /><br /><br /><br /><br />
+</div>
