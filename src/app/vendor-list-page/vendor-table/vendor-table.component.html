@@ -4,7 +4,7 @@
       <th
         *ngFor="let head of headers"
         class="text-capitalize text-nowrap"
-        [ngClass]="{ 'text-cursor': filterHeaders.includes(head) }"
+        [attr.role]="filterHeaders.includes(head) ? 'button' : 'text'"
       >
         <div class="f-flex">
           <span class="me-2">{{ head }}</span>

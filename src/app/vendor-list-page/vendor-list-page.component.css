@@ -67,3 +67,7 @@
 .ba-container {
     overflow: auto;
 }
+
+.ba-search-label {
+    color: #474AFF;
+}
