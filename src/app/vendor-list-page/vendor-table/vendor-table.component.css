@@ -1,0 +1,29 @@
+:host {
+    display: block;
+}
+
+thead th {
+    background-color: #EEEEEF;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ba-status-green {
+    background-color: #D7F8E1;
+    color: #057926;
+}
+
+.ba-status-blue {
+    background-color: #EDEDFD;
+    color: #2D2E8E;
+}
+
+.ba-status-yellow {
+    background-color: #FFEDCC;
+    color: #966200;
+}
+
+.ba-status-red {
+    background-color: #FAE6E6;
+    color: #7F1111;
+}

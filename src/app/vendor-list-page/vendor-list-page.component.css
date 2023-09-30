@@ -36,3 +36,35 @@
     background-color: #cef4d9;
     border-radius: 15px;
 }
+
+.ba-btn-next {
+    border: 1px solid #DEDEDE;
+    color: #464646;
+}
+
+.ba-pagination {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ba-pagination-active {
+    background-color: #EDEDFF;
+    color: #474AFF
+}
+
+.ba-table-container {
+    overflow: auto;
+    width: 100%;
+    flex: 1;
+}
+
+.ba-table-content {
+    min-width: min-content;
+}
+
+.ba-container {
+    overflow: auto;
+}

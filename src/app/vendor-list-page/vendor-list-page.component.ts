@@ -33,6 +33,8 @@ export class VendorListPageComponent implements OnInit {
       increment: 6,
     },
   ];
+  pages = [1, 2, 3, 4, 5];
+  activePage = this.pages[0];
 
   constructor() {}
 

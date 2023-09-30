@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="bg-white d-flex flex-column h-100 w-100 ba-container">
   <section>
     <div class="container-fluid">
       <h5 class="mb-2 fs-5">Overview</h5>
@@ -75,5 +75,47 @@
     </div>
   </section>
 
-  <br /><br /><br /><br /><br /><br />
+  <section class="ba-table-container px-3">
+    <app-vendor-table class="ba-table-content"></app-vendor-table>
+  </section>
+
+  <section>
+    <hr />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div
+          class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 d-flex flex-row justify-content-center align-items-center"
+        >
+          <div class="ba-pagination-container d-flex flex-row gap-1">
+            <div
+              *ngFor="let page of pages"
+              class="ba-pagination"
+              role="button"
+              [ngClass]="{ 'ba-pagination-active': activePage === page }"
+              (click)="activePage = page"
+            >
+              {{ page }}
+            </div>
+            <span class="d-flex flex-row align-items-end">...</span>
+            <div
+              class="ba-pagination"
+              role="button"
+              [ngClass]="{ 'ba-pagination-active': activePage === 11 }"
+              (click)="activePage = 11"
+            >
+              11
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 d-flex flex-row justify-content-end"
+        >
+          <button type="button" class="btn ba-btn-next text-capitalize">
+            next&nbsp;<i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
