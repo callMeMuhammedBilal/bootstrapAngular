@@ -52,7 +52,8 @@
 
 .ba-pagination-active {
     background-color: #EDEDFF;
-    color: #474AFF
+    color: #474AFF;
+    font-weight: 500;
 }
 
 .ba-table-container {
@@ -61,7 +62,8 @@
 }
 
 .ba-table-content {
-    min-width: min-content;
+    overflow: auto;
+    width: 100%;
 }
 
 .ba-container {
