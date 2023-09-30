@@ -58,7 +58,6 @@
 .ba-table-container {
     overflow: auto;
     width: 100%;
-    flex: 1;
 }
 
 .ba-table-content {
