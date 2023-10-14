@@ -6,6 +6,8 @@ thead th {
     background-color: #EEEEEF;
     font-size: 14px;
     font-weight: 500;
+    text-transform: capitalize;
+    text-wrap: nowrap;
 }
 
 .ba-status-green {

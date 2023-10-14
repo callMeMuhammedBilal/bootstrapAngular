@@ -1,0 +1,78 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th
+        *ngFor="let head of allHeader"
+        class="text-capitalize text-nowrap"
+        [attr.role]="filterHeaders.includes(head.key) ? 'button' : 'text'"
+        [hidden]="!displayHeader.includes(head.key)"
+      >
+        <div class="f-flex">
+          <span class="me-2">{{ head.label }}</span>
+          <i
+            *ngIf="filterHeaders.includes(head.key)"
+            class="fa-solid fa-sort"
+          ></i>
+        </div>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody *ngIf="displayData.length">
+    <tr *ngFor="let data of displayData">
+      <td *ngIf="displayHeader.includes(allKeys.code)">
+        <a href="#" class="link-underline-primary"> PA16189 </a>
+      </td>
+      <td *ngIf="displayHeader.includes(allKeys.name)" class="text-capitalize">
+        vendor nithish
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.organizationType)"
+        class="text-capitalize"
+      >
+        Government Entity
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.classification)"
+        class="text-capitalize"
+      >
+        active regular
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.headerName)"
+        class="text-capitalize"
+      >
+        j sai venkatesh
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.requestType)"
+        class="text-capitalize"
+      >
+        renewal
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.requestStatus)"
+        class="text-capitalize"
+      >
+        approved
+      </td>
+      <td *ngIf="displayHeader.includes(allKeys.vendorStatus)">
+        <span
+          role="button"
+          class="badge rounded-pill fw-normal py-2 px-3"
+          [ngClass]="{
+            'ba-status-green': true,
+            'ba-status-blue': false,
+            'ba-status-yellow': false,
+            'ba-status-red': false
+          }"
+        >
+          approved
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="!displayData.length" class="w-100 text-capitalize text-center">
+  no data found
+</div>

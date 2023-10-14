@@ -3,20 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VendorListPageComponent } from './vendor-list-page/vendor-list-page.component';
-import { VendorTableComponent } from './vendor-list-page/vendor-table/vendor-table.component';
+import { BootstrapTableComponent } from './component';
+import { VendorListPageComponent } from './pages';
+
+const PAGES = [VendorListPageComponent];
+const COMPONENTS = [BootstrapTableComponent];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    VendorListPageComponent,
-    VendorTableComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ...PAGES, ...COMPONENTS],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
