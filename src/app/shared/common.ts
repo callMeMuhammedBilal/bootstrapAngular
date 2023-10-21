@@ -1,4 +1,5 @@
 export enum tableHeader {
+  'checkbox' = 'checkbox',
   'code' = 'code',
   'name' = 'name',
   'organizationType' = 'organizationType',
@@ -7,4 +8,12 @@ export enum tableHeader {
   'requestType' = 'requestType',
   'requestStatus' = 'requestStatus',
   'vendorStatus' = 'vendorStatus',
+  'status' = 'status',
+  'panNumber' = 'panNumber',
+  'gstNumber' = 'gstNumber',
+  'creditTerms' = 'creditTerms',
+  'limitDays' = 'limitDays',
+  'viewSummary' = 'viewSummary',
+  'edit' = 'edit',
+  'toggleButton' = 'toggleButton',
 }

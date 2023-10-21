@@ -7,12 +7,23 @@
         [attr.role]="filterHeaders.includes(head.key) ? 'button' : 'text'"
         [hidden]="!displayHeader.includes(head.key)"
       >
-        <div class="f-flex">
+        <div *ngIf="head.label" class="f-flex">
           <span class="me-2">{{ head.label }}</span>
           <i
             *ngIf="filterHeaders.includes(head.key)"
             class="fa-solid fa-sort"
           ></i>
+        </div>
+
+        <div
+          *ngIf="head.key === allKeys.checkbox"
+          class="d-flex align-items-center justify-content-center"
+        >
+          <input
+            class="form-check-input pa-checkbox"
+            type="checkbox"
+            value=""
+          />
         </div>
       </th>
     </tr>
@@ -20,11 +31,59 @@
 
   <tbody *ngIf="displayData.length">
     <tr *ngFor="let data of displayData">
+      <td *ngIf="displayHeader.includes(allKeys.checkbox)">
+        <div class="d-flex align-items-center justify-content-center">
+          <input
+            class="form-check-input pa-checkbox"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </td>
       <td *ngIf="displayHeader.includes(allKeys.code)">
         <a href="#" class="link-underline-primary"> PA16189 </a>
       </td>
       <td *ngIf="displayHeader.includes(allKeys.name)" class="text-capitalize">
         vendor nithish
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.panNumber)"
+        class="text-capitalize"
+      >
+        BEA8292899HG
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.gstNumber)"
+        class="text-capitalize"
+      >
+        122447193798
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.creditTerms)"
+        class="text-capitalize"
+      >
+        10
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.limitDays)"
+        class="text-capitalize"
+      >
+        20
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.viewSummary)"
+        class="text-capitalize"
+      >
+        20
+      </td>
+      <td *ngIf="displayHeader.includes(allKeys.edit)" class="text-capitalize">
+        <!-- <app-edit-icon></app-edit-icon> -->
+      </td>
+      <td
+        *ngIf="displayHeader.includes(allKeys.toggleButton)"
+        class="text-capitalize"
+      >
+        20
       </td>
       <td
         *ngIf="displayHeader.includes(allKeys.organizationType)"
@@ -68,6 +127,20 @@
           }"
         >
           approved
+        </span>
+      </td>
+      <td *ngIf="displayHeader.includes(allKeys.status)">
+        <span
+          role="button"
+          class="badge rounded-pill fw-normal py-2 px-3"
+          [ngClass]="{
+            'ba-status-green': true,
+            'ba-status-blue': false,
+            'ba-status-yellow': false,
+            'ba-status-red': false
+          }"
+        >
+          active
         </span>
       </td>
     </tr>

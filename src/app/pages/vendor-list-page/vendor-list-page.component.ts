@@ -37,14 +37,23 @@ export class VendorListPageComponent implements OnInit {
   pages = [1, 2, 3, 4, 5];
   activePage = this.pages[0];
   displayHeader = [
+    tableHeader.checkbox,
     tableHeader.code,
     tableHeader.name,
+    tableHeader.panNumber,
+    tableHeader.gstNumber,
+    tableHeader.creditTerms,
+    tableHeader.limitDays,
+    tableHeader.viewSummary,
+    tableHeader.edit,
+    tableHeader.toggleButton,
     // tableHeader.organizationType,
-    tableHeader.classification,
-    tableHeader.headerName,
-    tableHeader.requestType,
+    // tableHeader.classification,
+    // tableHeader.headerName,
+    // tableHeader.requestType,
     // tableHeader.requestStatus,
-    tableHeader.vendorStatus,
+    // tableHeader.vendorStatus,
+    tableHeader.status,
   ];
 
   constructor() {}

@@ -29,3 +29,9 @@ thead th {
     background-color: #FAE6E6;
     color: #7F1111;
 }
+
+input.pa-checkbox {
+    height: 17px;
+    width: 17px;
+    margin-block: 0.25em;
+}
