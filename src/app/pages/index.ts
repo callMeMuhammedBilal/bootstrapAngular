@@ -1,1 +1,2 @@
-export * from './vendor-list-page';
+export * from './vendor-list';
+export * from './nav-page';

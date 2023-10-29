@@ -1,0 +1,13 @@
+<section class="p-4">
+  <h4 class="mb-3">page list</h4>
+
+  <ul class="p-0 m-0">
+    <li
+      *ngFor="let nav of navList"
+      class="p-2 mb-2"
+      (click)="onClickGo({ nav: nav })"
+    >
+      {{ nav.name }}
+    </li>
+  </ul>
+</section>

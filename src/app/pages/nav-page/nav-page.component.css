@@ -1,0 +1,16 @@
+ul,li {
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    border: 1px solid blue;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
