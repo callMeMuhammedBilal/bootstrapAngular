@@ -4,16 +4,20 @@ import { CommonModule } from '@angular/common';
 import { EyeIconComponent } from './eye-icon';
 import { PlusIconComponent } from './plus-icon';
 import { EditIconComponent } from './edit-icon';
-import { RightSidePopupComponent } from './popup';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RightSidePopupComponent } from './right-side-popup';
 
-const POPUP = [RightSidePopupComponent];
-const COMPONENT = [EyeIconComponent, PlusIconComponent, EditIconComponent];
+const COMPONENT = [
+  EyeIconComponent,
+  PlusIconComponent,
+  EditIconComponent,
+  RightSidePopupComponent,
+];
 
 @NgModule({
-  declarations: [...COMPONENT, ...POPUP],
+  declarations: [...COMPONENT],
   imports: [CommonModule, MatDialogModule],
-  exports: [...COMPONENT, ...POPUP, MatDialogModule],
+  exports: [...COMPONENT],
   providers: [],
   bootstrap: [],
 })

@@ -6,3 +6,15 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.right-side-popup {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.right-side-popup .mat-dialog-container {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

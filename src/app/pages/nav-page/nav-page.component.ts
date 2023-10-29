@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { RightSidePopupComponent } from 'src/app/shared/component/popup';
+import { RightSidePopupComponent } from 'src/app/shared/component/right-side-popup';
 
 interface INavList {
   name: string;
